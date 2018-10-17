@@ -42,8 +42,10 @@ endif
 """"""""""""""""""""
 """""colr scheme""""
 """"""""""""""""""""
-colorscheme default
-"set background=dark
+""colorscheme default
+colorscheme peaksea
+set background=dark
+
 
 
 
@@ -58,7 +60,7 @@ set mouse=a
 set clipboard=unnamed
 
 "airline theme set to simple
-let g:airline_theme='molokai'
+""let g:airline_theme='molokai'
 
  
 ""keep original style when paste
