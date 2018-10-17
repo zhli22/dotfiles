@@ -13,4 +13,4 @@
  catch
  endtry' > ~/.vimrc
  
- echo "Installed the Ultimate Vim configuration successfully! Enjoy :-)"
+ echo "\n\n\n----------Welcome to use my magic vim---------- \n\n-------------*★,°*:.☆\(￣▽￣)/$:*.°★* 。-----------------\n\n"
