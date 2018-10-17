@@ -1,28 +1,22 @@
 syntax on
+""filetype on
 """"""""""""""""""""
 "indentation
 set autoindent                                                                                             
-set nu
-set tabstop=4
+set softtabstop=4
 set nobackup
-set shiftwidth=4
+set shiftwidth=0
 set expandtab
 
 """"""""""""""""""""
 " show line
 set number
-""""""""""""""""""""
-"
 set cursorline
+set relativenumber
+set ruler
 """"""""""""""""""""
 " brackets match
 set showmatch
-""""""""""""""""""""
-" relative number
-set relativenumber
-""""""""""""""""""""
-" line under our input
-set ruler
 """"""""""""""""""""
 "make the longest line multiple lines
 set wrap
@@ -63,5 +57,14 @@ set mouse=a
 "clipboard problem to be solved
 set clipboard=unnamed
 
-let g:airline_theme='simple'
+"airline theme set to simple
+let g:airline_theme='molokai'
+
  
+""keep original style when paste
+nnoremap  :set invpaste paste? imap :set invpaste paste? set pastetoggle=
+
+
+
+
+
