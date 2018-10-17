@@ -5,10 +5,10 @@ filetype plugin on
 "indentation
 set autoindent                                                                                             
 set tabstop=4
-set softtabstop=0
+set softtabstop=4
 set nobackup
-set shiftwidth=0
-""set expandtab
+set shiftwidth=-4
+set expandtab
 
 """"""""""""""""""""
 " show line
@@ -82,16 +82,5 @@ set pastetoggle=
 
 ""inoremap {<Return> {<CR><CR>}<C-o>k<Tab>
 "after brackets and return auto indent
-inoremap {<CR> {<CR>}<ESC>O
-
-
-
-
-
-
-
-
-
-
-
+inoremap {<CR> {<CR>}<ESC>O<Tab>
 
