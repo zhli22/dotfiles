@@ -13,8 +13,16 @@ Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'vim-syntastic/syntastic'
-Plug 'vim-scripts/taglist.vim'
 ":TlistOpen to open the taglist
+Plug 'vim-scripts/taglist.vim'
+"to use more colors add colorscheme into vimrc
+Plug 'flazz/vim-colorschemes'
+
+
+
+
+"requires Vim 7.4.1578+
+"Plug 'Valloric/YouCompleteMe' 
 
 "need vim at least 8.0 version
 "Plug 'w0rp/ale'

@@ -85,13 +85,3 @@ set pastetoggle=
 inoremap {<CR> {<CR>}<ESC>O
 
 
-
-
-
-
-
-
-
-
-
-
