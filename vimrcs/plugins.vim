@@ -13,6 +13,9 @@ Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'vim-syntastic/syntastic'
+Plug 'vim-scripts/taglist.vim'
+":TlistOpen to open the taglist
+
 "need vim at least 8.0 version
 "Plug 'w0rp/ale'
 
