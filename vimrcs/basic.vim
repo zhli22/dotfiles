@@ -84,4 +84,5 @@ set pastetoggle=
 "after brackets and return auto indent
 inoremap {<CR> {<CR>}<ESC>O
 
-
+"in case backspace doesnt work
+set backspace=indent, eol, start
