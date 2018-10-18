@@ -85,4 +85,5 @@ set pastetoggle=
 inoremap {<CR> {<CR>}<ESC>O
 
 "in case backspace doesnt work
-set backspace=indent, eol, start
+set backspace=indent,eol,start
+
