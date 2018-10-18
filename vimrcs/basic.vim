@@ -25,15 +25,12 @@ set ruler
 set showmatch
 
 
-
 "make the longest line multiple lines
 set wrap
 
 
-
 """"""""""""""""""""
 set nocompatible
-
 
 
 """"""""""""""""""""
@@ -45,7 +42,6 @@ set incsearch
 set ignorecase
 
 
-
 "map the brackets
 :inoremap ( ()<ESC>i
 :inoremap { {}<ESC>i
@@ -54,9 +50,9 @@ set ignorecase
 :inoremap ' ''<ESC>i
 
 " Enable 256 colors palette in Gnome Terminal
-if $COLORTERM == 'gnome-terminal'
+""if $COLORTERM == 'gnome-terminal'
 set t_Co=256
-endif
+""endif
 
 """"""""""""""""""""
 """""colr scheme""""
@@ -87,6 +83,5 @@ inoremap {<CR> {<CR>}<ESC>O
 
 "in case backspace doesnt work
 set backspace=indent,eol,start
-
 
 
