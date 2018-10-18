@@ -66,6 +66,7 @@ set background=dark
 colorscheme peaksea
 
 
+"in order to do extra key combinations
 let mapleader =","
 
 
@@ -74,7 +75,7 @@ set mouse=a
 
 
 "clipboard problem to be solved
-set clipboard=unnamed
+set clipboard=unnamedplus
 
  
 ""keep original style when paste
@@ -86,4 +87,6 @@ inoremap {<CR> {<CR>}<ESC>O
 
 "in case backspace doesnt work
 set backspace=indent,eol,start
+
+
 
