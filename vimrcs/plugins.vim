@@ -18,9 +18,6 @@ Plug 'vim-scripts/taglist.vim'
 "to use more colors add colorscheme into vimrc
 Plug 'flazz/vim-colorschemes'
 
-
-
-
 "requires Vim 7.4.1578+
 "Plug 'Valloric/YouCompleteMe' 
 
@@ -53,7 +50,7 @@ let g:NERDTreeWinPos = "right"
 
 "syntastic check
 let g:syntastic_error_symbol=">>"
-let g:syntastic_warning_symbol='!'
+let g:syntastic_warning_symbol='--'
 let g:syntastic_check_on_open=0
 let g:syntastic_check_on_wq=1
 "set syntastic window color to nothing
@@ -62,7 +59,7 @@ highlight SignColumn ctermbg=NONE ctermfg=NONE cterm=bold
 "tag list shown on the right and bar width set to 0
 let Tlist_Use_Right_Window   = 1
 let Tlist_Enable_Fold_Column=0
-let Tlist_WinWidth = 30
+let Tlist_WinWidth = 35
 
 "tag list shortcut
 map <C-l> :TlistToggle<CR>
