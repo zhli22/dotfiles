@@ -43,16 +43,26 @@ map <C-n> :NERDTreeToggle<CR>
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
-
 "start using indent guide
 let g:indent_guides_enable_on_vim_startup = 1
 hi IndentGuidesOdd  ctermbg=black
 hi IndentGuidesEven ctermbg=darkgrey
 
+"nerd tree shown on the left
+let g:NERDTreeWinPos = "right"
 
 "syntastic check
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
+let g:syntastic_error_symbol=">>"
+let g:syntastic_warning_symbol='!'
 let g:syntastic_check_on_open=0
 let g:syntastic_check_on_wq=1
+"set syntastic window color to nothing
+highlight SignColumn ctermbg=NONE ctermfg=NONE cterm=bold
 
+"tag list shown on the right and bar width set to 0
+let Tlist_Use_Right_Window   = 1
+let Tlist_Enable_Fold_Column=0
+let Tlist_WinWidth = 30
+
+"tag list shortcut
+map <C-l> :TlistToggle<CR>
