@@ -4,7 +4,7 @@
 """"""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.vim_runtime/plugged')
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
