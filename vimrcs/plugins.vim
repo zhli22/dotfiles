@@ -31,7 +31,7 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""
 
 "airline theme set to simple
-let g:airline_theme='molokai'
+let g:airline_theme='peaksea'
 
 "nerdtree shortcut
 map <C-n> :NERDTreeToggle<CR>
@@ -63,3 +63,10 @@ let Tlist_WinWidth = 35
 
 "tag list shortcut
 map <C-l> :TlistToggle<CR>
+
+colorscheme apprentice
+"colorscheme molokai
+"colorscheme gruvbox
+"colorscheme peaksea
+"colorscheme jellybeans
+"colorscheme zenburn

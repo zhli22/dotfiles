@@ -1,3 +1,0 @@
-ssadfdfasdfsda;
-sadfa;
-int a;
