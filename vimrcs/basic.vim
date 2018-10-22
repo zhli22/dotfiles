@@ -44,7 +44,7 @@ set ignorecase
 
 "map the brackets
 :inoremap ( ()<ESC>i
-:inoremap { {}<ESC>i
+"":inoremap { {}<ESC>i
 :inoremap [ []<ESC>i
 :inoremap " ""<ESC>i
 :inoremap ' ''<ESC>i
@@ -77,9 +77,13 @@ set clipboard=unnamedplus
 ""keep original style when paste
 set pastetoggle=
 
-""inoremap {<Return> {<CR><CR>}<C-o>k<Tab>
+"some indention problem of python to be solved
+inoremap {<Return> {<CR><CR>}<C-o>k<Tab>
 "after brackets and return auto indent
-inoremap {<CR> {<CR>}<ESC>O
+
+"inoremap {<CR> {<CR>}<ESC>O
+"the next one might be useful
+""inoremap $4 {<esc>o}<esc>O
 
 "in case backspace doesnt work
 set backspace=indent,eol,start
