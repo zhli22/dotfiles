@@ -88,4 +88,5 @@ inoremap {<Return> {<CR><CR>}<C-o>k<Tab>
 "in case backspace doesnt work
 set backspace=indent,eol,start
 
-
+"show results of terminal directly into vim
+set t_ti= t_te=
