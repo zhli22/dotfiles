@@ -64,6 +64,9 @@ colorscheme peaksea
 
 "in order to do extra key combinations
 let mapleader =","
+"map short cut to save or quit
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
 
 
 "enable mouse to click
@@ -88,5 +91,7 @@ inoremap {<Return> {<CR><CR>}<C-o>k<Tab>
 "in case backspace doesnt work
 set backspace=indent,eol,start
 
-"show results of terminal directly into vim
-set t_ti= t_te=
+"show results of terminal directly into vim // t_ti=
+"leave capture of vim in terminal // t_te=
+""set t_ti=
+""set t_te= t_ti=
