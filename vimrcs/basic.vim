@@ -67,6 +67,20 @@ let mapleader =","
 "map short cut to save or quit
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
+nnoremap <leader>n :set invnumber<CR>
+nnoremap <leader>r :set relativenumber!<CR>
+"toggle mouse
+function! ToggleMouse()
+    " check if mouse is enabled
+    if &mouse == 'a'
+        " disable mouse
+        set mouse=
+    else
+        " enable mouse everywhere
+        set mouse=a
+    endif
+endfunc
+nnoremap <leader>m :call ToggleMouse()<CR>
 
 
 "enable mouse to click
