@@ -109,3 +109,7 @@ set backspace=indent,eol,start
 "leave capture of vim in terminal // t_te=
 ""set t_ti=
 ""set t_te= t_ti=
+
+"
+nnoremap j jzz
+nnoremap k kzz
