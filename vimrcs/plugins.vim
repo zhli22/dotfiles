@@ -24,6 +24,7 @@ Plug 'flazz/vim-colorschemes'
 "need vim at least 8.0 version
 "Plug 'w0rp/ale'
 
+Plug 'chriskempson/base16-vim'
 call plug#end()
 """"""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""
@@ -70,3 +71,7 @@ colorscheme apprentice
 "colorscheme peaksea
 "colorscheme jellybeans
 "colorscheme zenburn
+
+"toggle temrinal using neovim
+"nnoremap <leader>t :sp term://zsh<CR>
+"tnoremap <C-c> <C-\><C-n>:q!<CR>

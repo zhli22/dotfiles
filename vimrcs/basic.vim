@@ -111,5 +111,7 @@ set backspace=indent,eol,start
 ""set t_te= t_ti=
 
 "
+"
+map <space> :
 nnoremap j jzz
 nnoremap k kzz
