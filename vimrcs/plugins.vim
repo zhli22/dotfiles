@@ -73,5 +73,8 @@ colorscheme apprentice
 "colorscheme zenburn
 
 "toggle temrinal using neovim
-"nnoremap <leader>t :sp term://zsh<CR>
-"tnoremap <C-c> <C-\><C-n>:q!<CR>
+"nnoremap <leader>t :sp term://zsh<CR>i
+"tnoremap <C-l> <C-\><C-n>:q!<CR>
+"
+
+set splitbelow
