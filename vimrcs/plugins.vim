@@ -35,10 +35,15 @@ call plug#end()
 let g:airline_theme='peaksea'
 "airline add buffer on top
 let g:airline#extensions#tabline#enabled = 1
+"airline show page number
+let g:airline#extensions#tabline#tab_nr_type = 1
 
 "nerdtree shortcut
 map <C-n> :NERDTreeToggle<CR>
+"open in new tab
 let NERDTreeMapOpenInTab='<ENTER>'
+"quit tree while open new tab
+let NERDTreeQuitOnOpen=1
 
 "file finder ctrlp shortcut
 let g:ctrlp_map = '<c-p>'
@@ -83,5 +88,8 @@ colorscheme apprentice
 set splitbelow
 
 "switch between tabs
-nnoremap <C-j> :tabprevious<CR>                                                                            
-nnoremap <C-k> :tabnext<CR>
+nnoremap <C-k> :tabprevious<CR>                                                                            
+nnoremap <C-j> :tabnext<CR>
+
+"close all tabs at once
+nnoremap <C-q> :qa<CR>
