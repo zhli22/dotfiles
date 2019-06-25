@@ -113,5 +113,3 @@ set backspace=indent,eol,start
 "
 "
 map <space> :
-nnoremap j jzz
-nnoremap k kzz
