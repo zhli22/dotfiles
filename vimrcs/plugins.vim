@@ -9,9 +9,9 @@ call plug#begin('~/.vim_runtime/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
-Plug 'kien/ctrlp.vim'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
+"Plug 'kien/ctrlp.vim'
+""Plug 'tpope/vim-surround'
+""Plug 'tpope/vim-repeat'
 "to use more colors add colorscheme into vimrc
 Plug 'flazz/vim-colorschemes'
 
@@ -19,15 +19,28 @@ Plug 'flazz/vim-colorschemes'
 "Plug 'Valloric/YouCompleteMe' 
 
 "need vim at least 8.0 version
-Plug 'w0rp/ale'
+" Plug 'dense-analysis/ale'
 
 Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
 
 Plug 'chriskempson/base16-vim'
 
-Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+" Plug 'lervag/vimtex'
+
+"Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+
+"for markdown
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 
 
+Plug 'sirver/ultisnips'
+
+Plug 'scrooloose/nerdcommenter'
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+Plug 'majutsushi/tagbar'
+
+Plug 'chemzqm/vim-jsx-improve'
 
 call plug#end()
 """"""""""""""""""""""""""""""""""""""
@@ -46,9 +59,10 @@ let g:airline#extensions#tabline#show_tab_type = 1
 "nerdtree shortcut
 map <C-n> :NERDTreeToggle<CR>
 
+"ctrlp setting
 "file finder ctrlp shortcut
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+"let g:ctrlp_map = '<c-p>'
+"let g:ctrlp_cmd = 'CtrlP'
 
 "start using indent guide
 let g:indent_guides_enable_on_vim_startup = 1
@@ -92,8 +106,8 @@ function! s:check_back_space() abort
 endfunction
 
 "check syntax only when save file
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_enter = 0
+" let g:ale_lint_on_text_changed = 'never'
+" let g:ale_lint_on_enter = 0
 
 
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
@@ -102,7 +116,7 @@ autocmd FileType java setlocal omnifunc=javacomplete#Complete
 imap <C-l> <Plug>(coc-snippets-expand)
 
 " Use <C-j> for select text for visual placeholder of snippet.
-""vmap <C-j> <Plug>(coc-snippets-select)
+" vmap <C-j> <Plug>(coc-snippets-select)
 
 " Use <C-j> for jump to next placeholder, it's default of coc.nvim
 let g:coc_snippet_next = '<c-j>'
@@ -111,7 +125,7 @@ let g:coc_snippet_next = '<c-j>'
 let g:coc_snippet_prev = '<c-k>'
 
 " Use <C-j> for both expand and jump (make expand higher priority.)
-""imap <C-j> <Plug>(coc-snippets-expand-jump)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 
 set termguicolors
@@ -121,9 +135,9 @@ colorscheme base16-default-dark
 
 "map terminal combine keys
 "exit terminal
-tnoremap <C-l> <C-\><C-n>:q!<CR>
+" tnoremap <C-l> <C-\><C-n>:q!<CR>
 "open terminal
-nnoremap <C-l> :sp term://zsh<CR>:resize 12 <CR>i
+" nnoremap <C-l> :sp term://zsh<CR>:resize 11 <CR>i
 tnoremap <C-w> <C-\><C-n><C-w><C-w>
 
 set splitbelow
@@ -148,12 +162,76 @@ imap <c-k> <ESC><Up>I
 inoremap <c-d> <DELETE>
 
 
+"leaderf setting
+"noremap <Leader>ff :LeaderfFunction<cr>
+"noremap <Leader>fb :LeaderfBuffer<cr>
+"noremap <Leader>ft :LeaderfTag<cr>
+"noremap <Leader>fm :LeaderfMru<cr>
+"noremap <Leader>fl :LeaderfLine<cr>
+
+"let g:python3_host_prog='/Library/Frameworks/Python.framework/Versions/3.6/bin/python3'
+"let g:python3_host_prog="/usr/local/bin/python3"
+"let g:python_host_prog='/usr/bin/python2.7'
+"
+"
+
+"vim tex
+" let g:tex_flavor='latex'
+" let g:vimtex_view_method='zathura'
+" let g:vimtex_quickfix_mode=0
+"auto hide math equation
+" set conceallevel=1
+" set concealcursor=nvc
+" let g:tex_conceal='abdmg'
+
+"let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsJumpForwardTrigger = '<TAB>'
+let g:UltiSnipsExpandTrigger='<Nop>'
 
 
-noremap <Leader>ff :LeaderfFunction<cr>
-noremap <Leader>fb :LeaderfBuffer<cr>
-noremap <Leader>ft :LeaderfTag<cr>
-noremap <Leader>fm :LeaderfMru<cr>
-noremap <Leader>fl :LeaderfLine<cr>
+"nerd commenter setting
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
 
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
 
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+" Enable NERDCommenterToggle to check all selected lines is commented or not 
+let g:NERDToggleCheckAllLines = 1
+nmap <C-c> <leader>c<Space>
+vmap <C-c> <leader>c<Space>
+
+" autocmd Filetype vert set syntax=c
+augroup vert
+  au!
+  autocmd BufNewFile,BufRead *.vert  set syntax=c 
+augroup END
+augroup frag
+  au!
+  autocmd BufNewFile,BufRead *.frag  set syntax=c 
+augroup END
+
+augroup geom
+  au!
+  autocmd BufNewFile,BufRead *.geom  set syntax=c 
+augroup END
+"
+"
+nmap <C-t> :TagbarToggle<CR>
+
+nmap <C-]> :call CocAction('jumpDefinition', 'tab drop') <CR>

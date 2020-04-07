@@ -12,9 +12,9 @@ set shiftwidth=0
 
 """"""""""""""""""""
 " show line
-set number
+""set number
 set cursorline
-set relativenumber
+""set relativenumber
 set ruler
 
 
@@ -57,9 +57,6 @@ set t_Co=256
 """"""""""""""""""""
 """""colr scheme""""
 """"""""""""""""""""
-colorscheme peaksea
-set background=dark
-colorscheme peaksea
 
 
 "in order to do extra key combinations
@@ -71,15 +68,16 @@ nnoremap <leader>n :set invnumber<CR>
 nnoremap <leader>r :set relativenumber!<CR>
 "toggle mouse
 function! ToggleMouse()
-    " check if mouse is enabled
-    if &mouse == 'a'
-        " disable mouse
-        set mouse=
-    else
-        " enable mouse everywhere
-        set mouse=a
-    endif
+" check if mouse is enabled
+if &mouse == 'a'
+	" disable mouse
+	set mouse=
+else
+	" enable mouse everywhere
+	set mouse=a
+endif
 endfunc
+
 nnoremap <leader>m :call ToggleMouse()<CR>
 
 
@@ -90,7 +88,7 @@ set mouse=a
 "clipboard problem to be solved
 set clipboard=unnamedplus
 
- 
+
 ""keep original style when paste
 set pastetoggle=
 
@@ -110,6 +108,10 @@ set backspace=indent,eol,start
 ""set t_ti=
 ""set t_te= t_ti=
 
-"
-"
 map <space> :
+        
+inoremap <C-s> <ESC><SPACE>:w<RETURN>
+
+"
+inoremap jk <ESC>
+
