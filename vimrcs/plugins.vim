@@ -42,6 +42,8 @@ Plug 'majutsushi/tagbar'
 
 Plug 'chemzqm/vim-jsx-improve'
 
+Plug 'skywind3000/asyncrun.vim'
+
 call plug#end()
 """"""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""
@@ -235,3 +237,12 @@ augroup END
 nmap <C-t> :TagbarToggle<CR>
 
 nmap <C-]> :call CocAction('jumpDefinition', 'tab drop') <CR>
+
+
+" asyncrun
+let g:asyncrun_open = 6
+
+let g:asyncrun_bell = 1
+nnoremap <F10> :call asyncrun#quickfix_toggle(6)<cr>
+nnoremap <F9> :AsyncRun 
+
