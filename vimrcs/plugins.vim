@@ -21,7 +21,7 @@ Plug 'flazz/vim-colorschemes'
 "need vim at least 8.0 version
 " Plug 'dense-analysis/ale'
 
-Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'chriskempson/base16-vim'
 
@@ -37,7 +37,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'sirver/ultisnips'
 
 Plug 'scrooloose/nerdcommenter'
-Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+" Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 Plug 'majutsushi/tagbar'
 
 Plug 'chemzqm/vim-jsx-improve'
