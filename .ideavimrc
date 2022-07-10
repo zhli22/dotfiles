@@ -1,0 +1,35 @@
+"set relativenumber
+let mapleader = ","
+map <space> :
+set ignorecase
+set clipboard=unnamed
+filetype on
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>n :set invnumber<CR>
+nnoremap <leader>r :set relatienumber!<CR>
+
+set pastetoggle=
+
+
+inoremap <C-e> <ESC>A
+inoremap <C-a> <ESC>I
+
+nnoremap <C-a> 0
+"nnoremap <C-e> $
+nnoremap <C-j> :tabnext<CR>
+nnoremap <C-k> :tabprev<CR>
+
+nnoremap <leader>1 1gt
+nnoremap <leader>2 2gt
+nnoremap <leader>3 3gt
+nnoremap <leader>4 4gt
+nnoremap <leader>5 5gt
+nnoremap <leader>6 6gt
+nnoremap <leader>7 7gt
+nnoremap <leader>8 8gt
+nnoremap <leader>9 9gt
+nnoremap <leader>0 :tablast<CR>
+map <C-t> <Nop>
+
+set easymotion
