@@ -33,3 +33,4 @@ nnoremap <leader>0 :tablast<CR>
 map <C-t> <Nop>
 
 set easymotion
+set hlsearch
